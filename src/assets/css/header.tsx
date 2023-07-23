@@ -6,6 +6,7 @@ justifyContent:'space-between',
 alignItems:'center',
 padding:'16px 32px',
 borderBottom: '0.5px solid #C2CEDB',
+backgroundColor:'#fff',
 
 '& .breadcrumb':{
 fontSize:'.75rem',
