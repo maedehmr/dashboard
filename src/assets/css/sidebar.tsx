@@ -41,34 +41,63 @@ export const SidebarRightContainer = styled.div((props) => ({
     strong: {
       fontSize: ".75rem",
     },
-    ul: {
-      li: {
-        marginTop: "16px",
-        padding: "12px 0",
+
+    a: {
+      marginTop: "16px",
+      padding: "12px 0",
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      fontSize: ".875rem",
+      transition: "ease .3s",
+      color: "#F0F2F5",
+
+      "& .item": {
         display: "flex",
         alignItems: "center",
-        justifyContent: "space-between",
-        fontSize: ".875rem",
-        transition:'ease .3s',
 
-        "& .item": {
-          display: "flex",
-          alignItems: "center",
-
-          small: {
-            marginRight:'8px',
-          },
+        small: {
+          marginRight: "8px",
         },
+      },
 
-        '&:hover':{
-            background: 'linear-gradient(to right, #2A3541, transparent)',
-          padding:'12px 0 12px 10px',
-          borderRadius:'8px',
-          cursor:'pointer'
-        },
+      "&:hover": {
+        background: "linear-gradient(to right, #2A3541, transparent)",
+        padding: "12px 0 12px 10px",
+        borderRadius: "8px",
+        cursor: "pointer",
       },
     },
   },
+
+  "@media (max-width: 768px)": {
+    display: "none",
+  },
 }));
 
-export const SidebarBottomContainer = styled.div((props) => ({}));
+export const SidebarBottomContainer = styled.div((props) => ({
+  position: "fixed",
+  bottom: "0",
+  left: "0",
+  width: "100%",
+  backgroundColor: "#35414F",
+  padding:'12px 0',
+
+  ul: {
+    display:'flex',
+    justifyContent:'space-around',
+
+    a: {
+      display: "flex",
+      flexDirection: "column",
+      alignItems:'center',
+      color: "#F0F2F5",
+      gap:'10px',
+      fontSize: ".875rem",
+    },
+  },
+
+  "@media (min-width: 768px)": {
+    display: "none",
+  },
+}));

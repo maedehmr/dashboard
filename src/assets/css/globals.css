@@ -119,3 +119,6 @@ table {
     font-weight: 400;
     direction: rtl;
 }
+a{
+  text-decoration: none;
+}
