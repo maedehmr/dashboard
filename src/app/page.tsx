@@ -1,6 +1,8 @@
+//components
+import Home from "@/components/home/home"
 
-export default function Home() {
+export default function HomePage() {
   return (
-<div>ماورای زمین</div>
+<Home/>
   )
 }
