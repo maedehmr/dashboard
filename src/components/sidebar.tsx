@@ -1,5 +1,8 @@
 "use client";
 import Image from "next/image";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation'
+import { useState } from 'react';
 
 //assets
 import {
@@ -17,6 +20,7 @@ import activeDashboard from "@/assets/img/active-dashboard.svg";
 import activeOrders from "@/assets/img/active-orders.svg";
 
 export const SidebarRight = () => {
+
   return (
     <SidebarRightContainer>
       <div className="head">
@@ -33,18 +37,22 @@ export const SidebarRight = () => {
         <strong>مدیریت پنل</strong>
         <ul>
           <li>
+            <Link href='/'>
             <div className="item">
               <Image src={dashboard} alt="dashboard" />
               <small>میز کار</small>
             </div>
             <Image src={rightArrow} alt="right-arrow" />
+            </Link>
           </li>
           <li>
+            <Link href='/orders'>
             <div className="item">
               <Image src={orders} alt="orders" />
               <small>سفارشات</small>
             </div>
             <Image src={rightArrow} alt="right-arrow" />
+            </Link>
           </li>
         </ul>
       </div>

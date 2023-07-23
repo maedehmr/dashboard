@@ -12,7 +12,7 @@ const Orders = () => {
     <Dashboard>
       <Header />
       <OrdersContainer>
-        <div className="">salam</div>
+        <div className="">orders</div>
       </OrdersContainer>
     </Dashboard>
   );
