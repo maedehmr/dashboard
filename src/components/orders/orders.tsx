@@ -1,5 +1,3 @@
-"use client";
-
 //assets
 import { OrdersContainer } from "@/assets/css/orders";
 

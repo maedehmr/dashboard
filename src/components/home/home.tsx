@@ -1,5 +1,3 @@
-"use client";
-
 //assets
 import { HomeContainer } from "@/assets/css/home";
 

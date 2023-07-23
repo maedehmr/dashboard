@@ -93,7 +93,7 @@ export const SidebarBottomContainer = styled.div((props) => ({
       alignItems:'center',
       color: "#F0F2F5",
       gap:'10px',
-      fontSize: ".875rem",
+      fontSize: ".75rem",
     },
   },
 

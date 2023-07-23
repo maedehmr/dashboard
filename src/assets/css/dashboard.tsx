@@ -1,5 +1,9 @@
-import styled from '@emotion/styled';
+import styled from "@emotion/styled";
 
-export const DashboardContainer = styled.div(props => ({
-display:'flex',
+export const DashboardContainer = styled.div((props) => ({
+  display: "flex",
+
+  "& .content": {
+    width: "100%",
+  },
 }));

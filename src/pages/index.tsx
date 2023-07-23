@@ -1,6 +1,14 @@
 //components
 import Home from "@/components/home/home";
+import Head from "next/head";
 
 export default function HomePage() {
-  return <Home />;
+  return (
+    <>
+      <Head>
+        <title>Dashboard</title>
+      </Head>
+      <Home />
+    </>
+  );
 }

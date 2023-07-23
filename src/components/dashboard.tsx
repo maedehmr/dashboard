@@ -1,5 +1,3 @@
-"use client";
-
 //assets
 import { DashboardContainer } from "@/assets/css/dashboard";
 
