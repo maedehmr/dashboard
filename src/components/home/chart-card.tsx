@@ -1,8 +1,10 @@
 import Image from "next/image";
-//mui chart
+
+// //mui chart
 import { BarChart } from "@mui/x-charts/BarChart";
 import { LineChart } from "@mui/x-charts/LineChart";
 import { PieChart } from "@mui/x-charts/PieChart";
+
 //assets
 import { ChartCardContainer } from "@/assets/css/home";
 
@@ -13,9 +15,17 @@ interface chartProps {
   name: string;
   price: string;
   type: "bar" | "line" | "pie";
+  bottomTitle: string;
+  bottomDesc: string;
 }
 
-const ChartCard = ({ name, price, type }: chartProps) => {
+const ChartCard = ({
+  name,
+  price,
+  type,
+  bottomTitle,
+  bottomDesc,
+}: chartProps) => {
   let chart;
 
   if (type === "bar") {
@@ -23,8 +33,6 @@ const ChartCard = ({ name, price, type }: chartProps) => {
       <BarChart
         xAxis={[{ scaleType: "band", data: ["group A", "group B", "group C"] }]}
         series={[{ data: [4, 3, 5] }, { data: [1, 6, 3] }, { data: [2, 5, 6] }]}
-        width={500}
-        height={300}
       />
     );
   } else if (type === "line") {
@@ -36,8 +44,6 @@ const ChartCard = ({ name, price, type }: chartProps) => {
             data: [2, 5.5, 2, 8.5, 1.5, 5],
           },
         ]}
-        width={500}
-        height={300}
       />
     );
   } else if (type === "pie") {
@@ -52,23 +58,21 @@ const ChartCard = ({ name, price, type }: chartProps) => {
             ],
           },
         ]}
-        width={400}
-        height={200}
       />
     );
   }
   return (
     <ChartCardContainer>
-      <div className="">
-        <Image src={information} alt="information" />
+      <div className="top">
         <h5>{name}</h5>
+        <Image src={information} alt="information" />
       </div>
       <h4>{price}</h4>
-      {chart}
+      <div className="chart">{chart}</div>
       <hr />
-      <div className="">
-        <strong></strong>
-        <small></small>
+      <div className="bottom">
+        <strong>{bottomTitle}</strong>
+        <small>{bottomDesc}</small>
       </div>
     </ChartCardContainer>
   );
