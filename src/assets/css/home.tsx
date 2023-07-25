@@ -21,7 +21,7 @@ export const ChartCardContainer = styled.div((props) => ({
 
   h4: {
     fontWeight: "700",
-    fontSize: "24px",
+    fontSize: "1.75rem",
     color:'#414A53'
   },
 
