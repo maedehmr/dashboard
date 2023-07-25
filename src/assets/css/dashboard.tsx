@@ -5,7 +5,7 @@ export const DashboardContainer = styled.div((props) => ({
 
   "& .content": {
     width: "100%",
-    height:'100vh',
+    minHeight:'100vh',
     backgroundColor: "#F0F2F5",
   },
 }));

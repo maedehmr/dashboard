@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const SidebarRightContainer = styled.div((props) => ({
   backgroundColor: "#35414F",
   width: "260px",
-  height: "100vh",
+  minHeight: "100%",
 
   "& .head": {
     display: "flex",

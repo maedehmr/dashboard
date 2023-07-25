@@ -13,7 +13,7 @@ import { IPoets } from "@/api/dto/orders";
 const Table = () => {
   const [poets, setPoets] = useState<IPoets[]>([]);
   const [poetsPage, setPoetsPage] = useState(1);
-  const poetsPerPage = 10;
+  const poetsPerPage = 8;
   const totalPoetsPages = Math.ceil(poets.length / poetsPerPage);
 
   useEffect(() => {
